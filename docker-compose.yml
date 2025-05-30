@@ -1,0 +1,9 @@
+services:
+  abocn-catbot:
+    build: .
+    container_name: abocn-catbot
+    restart: unless-stopped
+    volumes:
+      - ./.env:/usr/src/app/.env:ro
+    environment:
+      - NODE_ENV=production 
