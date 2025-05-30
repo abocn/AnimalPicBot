@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "start": "nodemon"
+  },
   "dependencies": {
     "@dotenvx/dotenvx": "^1.44.1",
     "axios": "^1.9.0",
