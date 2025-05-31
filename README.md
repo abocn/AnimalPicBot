@@ -11,7 +11,7 @@
 > [!IMPORTANT]
 > You will only need all of them if you are not running it dockerized. Read ["Running with Docker"](#running-with-docker) for more information.
 
-- [Bun](https://bun.sh) (latest is suggested)
+- [Node.js](https://nodejs.org) or [Bun](https://bun.sh) (latest is suggested)
 - A Telegram bot (create one at [@BotFather](https://t.me/botfather))
 - Docker and Docker Compose (only required for Docker setup)
 
