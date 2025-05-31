@@ -36,10 +36,22 @@ async function sendAnimal() {
   let apiUrl;
   let imageUrl;
 
-  if (process.env.isCatOrDog === 'cat') {
-    apiUrl = process.env.catApiUrl;
-  } else if (process.env.isCatOrDog === 'dog') {
-    apiUrl = process.env.dogApiUrl;
+  switch (process.env.animalType) {
+    case "cat":
+      apiUrl = process.env.catApi;
+      break;
+    case "dog":
+      apiUrl = process.env.dogApi;
+      break;
+    case "duck":
+      apiUrl = process.env.duckApi;
+      break;
+    case "fox":
+      apiUrl = process.env.foxApi;
+      break;
+    default:
+      console.error(`Invalid animal type specified. Please set "animalType" to "cat", "duck", "fox" or "dog" in the .env file.`);
+      return;
   };
 
   const response = await axios.get(apiUrl);
@@ -48,11 +60,25 @@ async function sendAnimal() {
   const caption = formatDate();
   const data = response.data;
 
-  if (process.env.isCatOrDog === 'cat') {
-    imageUrl = `${data.url}`;
-  } else if (process.env.isCatOrDog === 'dog') {
-    imageUrl = `${data.message.replace(/\\\//g, '/')}`;
+  switch (process.env.animalType) {
+    case "cat":
+      imageUrl = data.url;
+      break;
+    case "dog":
+      imageUrl = data.message;
+      break;
+    case "duck":
+      imageUrl = data.url;
+      break;
+    case "fox":
+      imageUrl = data.image;
+      break;
+    default:
+      console.error(`Invalid animal type specified. Please set "animalType" to "cat", "duck", "fox" or "dog" in the .env file.`);
+      return;
   };
+
+  imageUrl = imageUrl.replace(/\\\//g, "/");
 
   bot.telegram.getChat(channelId).then(async (chat) => {
     await bot.telegram.sendPhoto(channelId, imageUrl, {
