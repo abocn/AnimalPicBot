@@ -76,12 +76,15 @@ If you prefer to use Docker directly, you can use these instructions instead.
 > Take care of your ``.env`` file, as it is so much important and needs to be secret (like your passwords), as anyone can do whatever they want to the bot with this token!
 
 - **botToken**: Put your bot token that you created at [@BotFather](https://t.me/botfather).
+- **cronSchedule**: Schedule for sending images (default: every day at midnight)
 - **channelId**: Channel ID to send images to
 - **ownerId**: Your Telegram user ID
 - **isCatOrDog**: Set dog or cat mode
 - **maxRetries**: Maximum number of retries after a crash
-- **dogApiUrl**: Likely `https://dog.ceo/api/breeds/image/random`
-- **catApiUrl**: Likely `https://cataas.com/cat?json=true`
+- **dogApi**: Likely `https://dog.ceo/api/breeds/image/random`
+- **catApi**: Likely `https://cataas.com/cat?json=true`
+- **duckApi**: Likely `https://random-d.uk/api/v2/random`
+- **foxApi**: Likely `https://randomfox.ca/floof/`
 
 ## Contributors
 
