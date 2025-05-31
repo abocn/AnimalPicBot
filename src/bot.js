@@ -59,9 +59,9 @@ async function sendAnimal() {
       caption: caption,
       parse_mode: 'Markdown'
     }).then(() => {
-      bot.telegram.sendMessage(ownerId, `Photo sent to ${chat.title} (${channelId}) successfully.`);
+      bot.telegram.sendMessage(ownerId, `Photo sent to ${chat.title} (${chat.username}, ${channelId}) successfully.`);
     }).catch((error) => {
-      bot.telegram.sendMessage(ownerId, `Failed to send photo to ${chat.title} (${channelId}): ${error.message}`);
+      bot.telegram.sendMessage(ownerId, `Failed to send photo to ${chat.title} (${chat.username}, ${channelId}): ${error.message}`);
     });
   });
 };
