@@ -9,7 +9,7 @@
 ## 🤓☝️ Self-host requirements
 
 > [!IMPORTANT]
-> You will only need all of them if you are not running it dockerized. Read ["Running with Docker"](#running-with-docker) for more information.
+> You will only need all of them if you are not running it dockerized. Read ["Deploying with Docker"](#-deploying-with-docker) for more information.
 
 - [Node.js](https://nodejs.org) or [Bun](https://bun.sh) (latest is suggested)
 - A Telegram bot (create one at [@BotFather](https://t.me/botfather))
@@ -23,7 +23,7 @@ First, clone the repo with Git:
 git clone https://github.com/ABOCN/AnimalPicBot
 ```
 
-Next, inside the repository directory, create an `.env` file with some content, which you can see the [example .env file](.env.example) to fill info with. To see the meaning of each one, see [the Functions section](#env-functions).
+Next, inside the repository directory, create an `.env` file with some content, which you can see the [example .env file](.env.example) to fill info with. To see the meaning of each one, see [the Functions section](#%EF%B8%8F-env-functions).
 
 After editing the file, save all changes and run the bot with ``bun start``.
 
@@ -88,10 +88,7 @@ If you prefer to use Docker directly, you can use these instructions instead.
 
 ## Contributors
 
-<a href="https://github.com/abocn/AnimalPicBot/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=abocn/AnimalPicBot" alt="Profile pictures of AnimalPicBot contributors" />
-</a>
-
+[![Profile pictures of AnimalPicBot contributors](https://contrib.rocks/image?repo=abocn/AnimalPicBot)](https://github.com/abocn/AnimalPicBot/graphs/contributors)
 Made with [contrib.rocks](https://contrib.rocks).
 
 ## License
