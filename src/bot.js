@@ -66,7 +66,8 @@ async function sendAnimal() {
   });
 };
 
-cron.schedule('0 0 * * *', sendAnimal);
+const cronSch = process.env.cronSchedule || "0 0 * * *";
+cron.schedule(cronSch, sendAnimal);
 
 const startBot = async () => {
   const botInfo = await bot.telegram.getMe();
