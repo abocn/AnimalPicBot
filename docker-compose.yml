@@ -1,7 +1,7 @@
 services:
-  abocn-catbot:
+  abocn-animals:
     build: .
-    container_name: abocn-catbot
+    container_name: abocn-animals
     restart: unless-stopped
     volumes:
       - ./.env:/usr/src/app/.env:ro

@@ -32,14 +32,27 @@ function formatDate() {
   return `${day}${suffix} ${month} ${year}`;
 }
 
-async function sendCatPic() {
-  const apiUrl = process.env.apiUrl;
+async function sendAnimal() {
+  let apiUrl;
+  let imageUrl;
+
+  if (process.env.isCatOrDog === 'cat') {
+    apiUrl = process.env.catApiUrl;
+  } else if (process.env.isCatOrDog === 'dog') {
+    apiUrl = process.env.dogApiUrl;
+  };
+
   const response = await axios.get(apiUrl);
   const channelId = process.env.channelId;
   const ownerId = process.env.ownerId;
   const caption = formatDate();
   const data = response.data;
-  const imageUrl = `${data.url}`;
+
+  if (process.env.isCatOrDog === 'cat') {
+    imageUrl = `${data.url}`;
+  } else if (process.env.isCatOrDog === 'dog') {
+    imageUrl = `${data.message.replace(/\\\//g, '/')}`;
+  };
 
   bot.telegram.getChat(channelId).then(async (chat) => {
     await bot.telegram.sendPhoto(channelId, imageUrl, {
@@ -53,7 +66,7 @@ async function sendCatPic() {
   });
 };
 
-cron.schedule('0 0 * * *', sendCatPic)
+cron.schedule('0 0 * * *', sendAnimal);
 
 const startBot = async () => {
   const botInfo = await bot.telegram.getMe();
