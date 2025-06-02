@@ -81,10 +81,6 @@ If you prefer to use Docker directly, you can use these instructions instead.
 - **ownerId**: Your Telegram user ID
 - **isCatOrDog**: Set dog or cat mode
 - **maxRetries**: Maximum number of retries after a crash
-- **dogApi**: Likely `https://dog.ceo/api/breeds/image/random`
-- **catApi**: Likely `https://cataas.com/cat?json=true`
-- **duckApi**: Likely `https://random-d.uk/api/v2/random`
-- **foxApi**: Likely `https://randomfox.ca/floof/`
 
 ## Contributors
 
