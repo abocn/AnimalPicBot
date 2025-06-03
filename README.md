@@ -79,7 +79,7 @@ If you prefer to use Docker directly, you can use these instructions instead.
 - **cronSchedule**: Schedule for sending images (default: every day at midnight)
 - **channelId**: Channel ID to send images to
 - **ownerId**: Your Telegram user ID
-- **isCatOrDog**: Set dog or cat mode
+- **animalType**: Set animal to send
 - **maxRetries**: Maximum number of retries after a crash
 
 ## Contributors
